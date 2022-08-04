@@ -1,0 +1,118 @@
+@charset "uft-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: .3s;
+}
+img{display: block;}
+
+header{height:100px; background: #573;}
+#slide{width:1200px; height:300px; margin: 0 auto; background:#faa;}
+#contents{width:1200px; height:200px; margin: 0 auto; background:#fee}
+footer{height:100px; background:#eee;}
+
+#header{
+    width:1200px; height:100px; margin: 0 auto;
+    display: flex;
+}
+.logo{
+    width:200px;
+    padding:30px 0;
+}
+nav{
+    width:1000px;
+    height:100px;    
+}
+/* nav */
+.sub{display: none; background:#ccc; height:160px;}
+/* .gnb:hover .sub{display: block;} */
+
+.gnb a{
+    text-align: center;
+    line-height: 40px;
+}
+.gnb li{
+    width:150px;
+}
+.gnb{
+    width:600px;
+    display: flex;
+    background:#fff;
+    position: relative;
+    top:30px;
+    left:370px;
+}
+.gnb li:hover>a{
+    background: #333;
+    color: #fff;
+}
+
+
+/* slide */
+#slide{overflow: hidden;}
+#slide ul{
+    width: 400%;
+    display: flex;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide{
+    0%{margin-left: 0px;}
+    33%{margin-left: -1200px;}
+    66%{margin-left: -2400px;}
+    100%{margin-left: -3600px;}
+}
+
+
+/* contents */
+#contents{display: flex;}
+#contents section{
+    width:380px; height:180px;
+    padding:10px;
+}
+.tab a{
+    text-align: center;
+    line-height: 29px;
+    border-bottom: 1px #333 solid;
+}
+.tab li{width:50%;}
+.tab{display: flex;}
+
+.subject{width:70%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.date{width:30%; text-align: right;}
+.notice a{display: flex; line-height: 30px;}
+.tab a:hover, .notice a:hover{
+    background:#333;
+    color:#fff;
+}
+
+
+.gallery img{width: 100px;}
+.gallery li{
+    width: 100px;
+    padding-top: 25px;
+}
+.gallery{
+    display: flex;
+    justify-content: space-evenly;
+}
+.gallery a:hover{
+    opacity: .7;
+}
+
+.shortcut img{width: 100px;}
+.shortcut{
+    display: flex;
+    justify-content: space-evenly;
+}
+.shortcut a:hover{
+    opacity: .7;
+}
